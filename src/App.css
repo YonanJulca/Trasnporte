@@ -1,38 +1,54 @@
+/* App.css */
 .App {
   text-align: center;
 }
+.contacto {
+  padding: 20px;
+  background-color: #0F50A3;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  color: hsl(0, 33%, 96%);
+}
+.trasporte {
+  padding: 20px;
+  background-color: #F8B901;
+  color: #0F50A3;
+}
+.trasporte img {
+  width: 10%;
+  height: auto;
+}
+.camion {
+  padding: 20px;
+  background-color: #0F50A3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mapa {
+  padding: 50px;
+  background-color: #F8B901;
+  color: #0F50A3;
+}
+
+.footer {
+  padding: 50px;
+  background-color: #0D161A;;
+  color: aliceblue;
+}
+
+
+.camion img {
+  width: 30%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .trasporte img {
+    width: 20%;
+  }
+
+  .camion img {
+    width: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
