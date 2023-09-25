@@ -4,11 +4,13 @@ import Logoblanco from "../imagen/logoCamionBlanco.png";
 import { FaWhatsapp, FaFacebook, FaYoutube } from "react-icons/fa";
 
 function Formulario() {
+  // Definir estados para los campos del formulario
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [asunto, setAsunto] = useState("");
   const [message, setMessage] = useState("");
 
+  // Manejar la función cuando se envía el formulario
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -31,20 +33,23 @@ function Formulario() {
         <h2>Contactanos, sera un gusto atenderte</h2>
         <h1>De Tu Mensaje :</h1>
 
+        {/* Logo */}
         <img src={Logoblanco} alt="logo de la camion" className="logo-img" />
+
+        {/* Iconos de redes sociales */}
         <div className="icon-redes">
-          <a href="a" >
+          <a href="a">
             <FaWhatsapp />
           </a>
-          <a href="a" >
-            {" "}
+          <a href="a">
             <FaFacebook />
           </a>
           <a href="a">
-            {" "}
             <FaYoutube />
           </a>
         </div>
+
+        {/* Campos del formulario */}
         <label htmlFor="name">Nombre:</label>
         <input
           type="text"
@@ -65,10 +70,10 @@ function Formulario() {
 
         <label htmlFor="asunto">Asunto :</label>
         <input
-          type="asunto"
+          type="text" // Cambiado a "text" en lugar de "asunto"
           id="asunto"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={asunto} // Corregido el valor (antes estaba como email)
+          onChange={(e) => setAsunto(e.target.value)} // Corregido el setter (antes estaba como setEmail)
           required
         />
 
@@ -79,6 +84,8 @@ function Formulario() {
           onChange={(e) => setMessage(e.target.value)}
           required
         ></textarea>
+
+        {/* Botón de enviar */}
         <div className="imagen">
           <input type="submit" value="Enviar" />
         </div>
